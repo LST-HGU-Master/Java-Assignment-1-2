@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
-public class HelloTest {
+public class Prog12Test {
 
    @Test
    public void testHelloWorld()
@@ -14,10 +14,15 @@ public class HelloTest {
      System.setOut(new PrintStream(bos));
 
      // action
-     Hello.main(null);
+     Prog12.main(null);
+     String expected = "半径5cmのパイの面積は、\n" +
+             "78.5\n" +
+             "パイの半径を倍にします\n" +
+             "半径10cmのパイの面積は、\n" +
+             "314.0\n";
 
      // assertion
-     assertEquals("Hello world!\n", bos.toString());
+     assertEquals(expected, bos.toString());
 
      // undo the binding in System
      System.setOut(originalOut);

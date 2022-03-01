@@ -1,14 +1,36 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# 課題 1-2
+定数の利用
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+### 課題の説明
+教科書p.55のコード1-5を打ち込みプログラムを完成させなさい。
+ただし、コード1-5にはそのままではエラーが発生し実行することができない。
+期待される実行結果を得るように修正すること。
+ただし、`final double PI = 3.14;` と `System.out.println(...)`の文は変更してはいけない。
 
-### Setup command
-N/A
+- 修正前のプログラム
+```java
+public class Prog12 {
 
-### Run command
-`gradle test`
+	public static void main(String[] args) {
+		final double PI = 3.14; //変更しない
+		int pie = 5;
+		System.out.println("半径" + pie + "cmのパイの面積は、");
+		System.out.println(pie * pie * PI);
 
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+		System.out.println("パイの半径を倍にします");
+		PI = 10;
+		System.out.println("半径" + pie + "cmのパイの面積は、");
+		System.out.println(pie * pie * PI);
+	}
+
+}
+```
+
+- 期待される実行結果
+```java
+半径5cmのパイの面積は、
+78.5
+パイの半径を倍にします
+半径10cmのパイの面積は、
+314.0
+```
