@@ -15,11 +15,11 @@ public class Prog12Test {
 
      // action
      Prog12.main(null);
-     String expected = "半径5cmのパイの面積は、\n" +
-             "78.5\n" +
-             "パイの半径を倍にします\n" +
-             "半径10cmのパイの面積は、\n" +
-             "314.0\n";
+     String expected = "半径5cmのパイの面積は、" + System.lineSeparator() +
+             "78.5" + System.lineSeparator() +
+             "パイの半径を倍にします" + System.lineSeparator() +
+             "半径10cmのパイの面積は、" + System.lineSeparator() +
+             "314.0" + System.lineSeparator();
 
      // assertion
      assertEquals(expected, bos.toString());
